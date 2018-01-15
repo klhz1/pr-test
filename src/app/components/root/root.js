@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { loadCategory } from '../../actions/categoryActions';
 import './root.scss';
+import ProductList from '../ProductList/productList.js';
 
 class Root extends Component {
     componentDidMount() {
@@ -13,11 +14,13 @@ class Root extends Component {
          * You can get the category data from the category prop:
          * const { category } = this.props;
          */
-        return (
-            <div className="hello-world">
-                Hello world! 👋🏻
+        const products = this.props.category.get('products');
+        return products ?
+            <div>
+                <ProductList list = { products } />
             </div>
-        );
+            :
+            <div>Loading..</div>;
     }
 }
 
