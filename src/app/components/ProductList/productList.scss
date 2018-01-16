@@ -1,0 +1,11 @@
+.product-list-cont {
+	margin: 10px auto;
+	padding: 0;
+	min-width: 600px;
+}
+
+@media (min-width: 1000px) {
+	.product-list-cont {
+		max-width: 1000px;
+	}
+}

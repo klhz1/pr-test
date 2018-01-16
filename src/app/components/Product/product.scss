@@ -1,61 +1,99 @@
-h2.product-title {
-	margin: 0;
-	padding: 0;
-}
-h2.product-price-from {
-	margin: 0;
-	padding: 0;
-}
-h4.product-retailer-count {
-	margin: 0;
-	padding: 0;
-}
 .product {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 130px;
-	width: 100%;
 	background-color: white;
-	margin: 5px;
-	padding: 10px;
+	box-sizing: border-box;
+	margin: 2px;
+	padding: 15px;
 }
 .product-img {
-	height: 70px;
-	width: 70px;
+	width: 100px;
+	height: 100px;
 }
 .product-info-block {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	color: #171717;
 }
 .product-price-block {
 	display: flex;
-	flex-direction: row;
-	align-items: flex-end;
+	flex-direction: row-reverse;
+	justify-content: space-between;
 }
 .product-title {
+	margin: 0;
+	padding: 0;
 }
 .product-price-from {
-}
-.product-text {
-	color: #6f6f6f;
+	font-size: 16px;
+	font-weight: bold;
 }
 .product-retailer-count {
-	display: inline-block;
+	font-size: 13px;
+	font-weight: bold;
+}
+.product-text {
+	display: none;
 }
 .product-link-compare {
-	display: block;
-	padding-top: 5px;
-	height: 27px;
-	width: 170px;
-	background-color: #1994e0;
-	color: white;
-	font-size: 18px;
-	border-radius: 5px;
-	text-decoration: none;
-	border: 1px solid #256cad;
-    border-bottom: 2px solid #256cad;
-    text-align: center;
-    cursor: pointer;
+	display: none;
+}
+@media (min-width: 700px) {
+	.product {
+		align-items: center;
+	    border-bottom: 2px solid #e1e4e6;
+	}
+	.product-img {
+	}
+	.product-info-block {
+	}
+	.product-price-block {
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+	.product-title {
+	}
+	.product-price-from {
+	}
+	.product-retailer-count {
+	}
+	.product-text {
+		display: block;
+	}
+	.product-link-compare {
+		display: block;
+		box-sizing: border-box;
+		height: 35px;
+		min-width: 110px;
+		background-color: #1994e0;
+		color: white;
+		font-size: 17px;
+		line-height: 30px;
+		border-radius: 5px;
+		text-decoration: none;
+		border: 1px solid #256cad;
+	    border-bottom: 2px solid #256cad;
+	    text-align: center;
+	    cursor: pointer;
+	}
+}
+@media (min-width: 1000px) {
+	.product {
+	}
+	.product-img {
+	}
+	.product-info-block {
+	}
+	.product-price-block {
+	}
+	.product-title {
+	}
+	.product-price-from {
+	}
+	.product-retailer-count {
+	}
+	.product-text {
+	}
+	.product-link-compare {
+	}
 }
