@@ -1,23 +1,29 @@
 .product {
+    font-family: 'Maven Pro';
 	display: flex;
 	background-color: white;
 	box-sizing: border-box;
 	margin: 2px;
-	padding: 15px;
+	padding: 15px 15px 10px 15px;
+	min-width: 400px;
 }
 .product-img {
 	width: 100px;
 	height: 100px;
+	margin-right: 15px;
 }
 .product-info-block {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	color: #171717;
+	text-decoration: none;
 }
 .product-price-block {
 	display: flex;
-	flex-direction: row-reverse;
+	flex-direction: row;
+	align-items: center;
+	width: 200px;
 	justify-content: space-between;
 }
 .product-title {
@@ -25,15 +31,21 @@
 	padding: 0;
 }
 .product-price-from {
-	font-size: 16px;
+	order: 0;
+	font-size: 18px;
 	font-weight: bold;
+	margin-right: 30px;
 }
 .product-retailer-count {
-	font-size: 13px;
+	order: 1;
+	font-size: 15px;
 	font-weight: bold;
+	margin-right: 0;
 }
 .product-text {
 	display: none;
+	margin: 5px 30px 15px 0;
+	font-size: 15px;
 }
 .product-link-compare {
 	display: none;
@@ -44,18 +56,24 @@
 	    border-bottom: 2px solid #e1e4e6;
 	}
 	.product-img {
+	width: 70px;
+	height: 70px;
 	}
 	.product-info-block {
+		pointer-events: none;
+		cursor: default;
 	}
 	.product-price-block {
 		flex-direction: row;
-		justify-content: flex-start;
+		width: 250px;
 	}
 	.product-title {
 	}
 	.product-price-from {
+	order: 1;
 	}
 	.product-retailer-count {
+	order: 0;
 	}
 	.product-text {
 		display: block;
