@@ -1,5 +1,4 @@
 .product {
-    font-family: 'Maven Pro';
 	display: flex;
 	background-color: white;
 	box-sizing: border-box;
@@ -72,6 +71,10 @@
 	.product {
 		align-items: center;
 	    border-bottom: 2px solid #e1e4e6;
+	    justify-content: flex-start;
+	}
+	.product-img-block {
+		flex-basis: 0;
 	}
 	.product-img {
 		width: 70px;
@@ -131,6 +134,7 @@
 	.product-retailer-count {
 	}
 	.product-text {
+		flex-basis: 0;
 	}
 	.product-link-compare {
 	}
