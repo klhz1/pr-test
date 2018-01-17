@@ -4,7 +4,14 @@ import { getProductImageLink } from '../../../app/utils/product.js';
 
 const Product = ({product}) =>
     <li className = "product">
-        <img className = "product-img" src = { getProductImageLink(product) } />
+        <div className = "product-img-block">
+            <img className = "product-img" src = { getProductImageLink(product) } />
+            <ul className = "product-rating">
+                { [...Array(Math.round(parseFloat(product.get('avgRating'))))].map((stars,i) =>
+                    <li key = { i} className = "product-rating-item"></li>
+                )}
+            </ul>
+        </div>
         <a className = "product-info-block" href = { product.get('comparePricesLink') }>
             <h3 className = "product-title">{ product.get('name') }</h3>
             <p className = "product-text">{ product.get('shortDescription') }</p>
